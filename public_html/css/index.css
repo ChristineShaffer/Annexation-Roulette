@@ -1,0 +1,69 @@
+html {
+    font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", FreeSans,
+                 sans-serif;
+}
+body {
+    margin: 0;
+    font-size: 62.5%;
+}
+h1 {
+    font-size: 3em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*
+ *  OTHER OPTIONS
+ */
+.title {
+    text-align: center;
+}
+
+#annexation-image { 
+    margin: 0 auto;
+    position: relative; 
+    width: 650px;
+    height: 500px; 
+    background-image: url(../resources/annexation_map.jpg); 
+}
+#map-part1 { 
+    position: absolute; 
+    top: 200px; 
+    left: 450px; 
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent;  
+    border: 2px solid red;
+}
+#map-part2 { 
+    position: absolute; 
+    top: 200px; 
+    left: 400px; 
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent;  
+    border: 2px solid green;
+} 
+#map-part3 { 
+    position: absolute; 
+    top: 200px; 
+    left: 300px; 
+    width: 50px; 
+    height: 50px; 
+    background-color: transparent;  
+    border: 2px solid orange;
+} 
+
+#map-part1:hover, #map-part1.hovered, #map-part2:hover, #map-part3:hover { 
+    background-color: yellow; 
+    opacity: 0.5;
+    filter: alpha(opacity=20);      
+}
+
+.prompt {
+    text-align: center;
+}
+#button {
+    padding: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
