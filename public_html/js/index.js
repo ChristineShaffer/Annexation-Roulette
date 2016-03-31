@@ -1,6 +1,7 @@
 $("document").ready( function() {   
     
-    $("#button").click( function() {
+    $("#button").click( function(e) {
+        e.preventDefault();
         
         var mapPartArray = ["#map-part1", "#map-part2", "#map-part3"];
         

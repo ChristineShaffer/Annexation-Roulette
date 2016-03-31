@@ -27,34 +27,50 @@ h1 {
 }
 #map-part1 { 
     position: absolute; 
-    top: 200px; 
-    left: 450px; 
-    width: 50px; 
-    height: 50px; 
+    top: 78px; 
+    left: 562px; 
+    width: 75px; 
+    height: 72px; 
     background-color: transparent;  
-    border: 2px solid red;
 }
 #map-part2 { 
     position: absolute; 
-    top: 200px; 
-    left: 400px; 
-    width: 50px; 
-    height: 50px; 
-    background-color: transparent;  
-    border: 2px solid green;
+    top: 80px; 
+    left: 380px; 
+    width: 178px; 
+    height: 72px; 
+    background-color: transparent; 
 } 
 #map-part3 { 
     position: absolute; 
+    top: 230px; 
+    left: 192px; 
+    width: 129px; 
+    height: 148px; 
+    background-color: transparent;
+} 
+#map-part4 { 
+    position: absolute; 
     top: 200px; 
-    left: 300px; 
-    width: 50px; 
-    height: 50px; 
-    background-color: transparent;  
-    border: 2px solid orange;
+    left: 192px; 
+    width: 129px; 
+    height: 200px; 
+    background-color: transparent; 
+    border: 2px solid red;
+} 
+#map-part5 { 
+    position: absolute; 
+    top: 230px; 
+    left: 192px; 
+    width: 129px; 
+    height: 148px; 
+    background-color: transparent; 
 } 
 
-#map-part1:hover, #map-part1.hovered, #map-part2:hover, #map-part3:hover { 
-    background-color: yellow; 
+#map-part1:hover, #map-part1.hovered, #map-part2:hover, #map-part2.hovered, 
+#map-part3:hover, #map-part3.hovered, #map-part4:hover, #map-part4.hovered,
+#map-part5:hover, #map-part5.hovered { 
+    background-color: black; 
     opacity: 0.5;
     filter: alpha(opacity=20);      
 }

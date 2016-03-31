@@ -22,14 +22,19 @@ and open the template in the editor.
         </div>
         
         <div id="annexation-image">
-            <a id="map-part1" href="http://www.example.com/"></a>
-            <a id="map-part2" href="http://www.example.com/"></a>
-            <a id="map-part3" href="http://www.example.com/"></a>
+            <a id="map-part1" class="hovered" href="http://www.example.com/"></a>
+            <a id="map-part2" class="hovered" href="http://www.example.com/"></a>
+            <a id="map-part3" class="hovered" href="http://www.example.com/"></a>
+            <a id="map-part4" class="hovered" href="http://www.example.com/"></a>
+            <!--<a id="map-part5" class="hovered" href="http://www.example.com/"></a>-->
         </div>
         
         <div class="prompt">
             <h1>Click the button below to randomly select an area</h1>
-            <button id="button">Play Annexation Roulette</button>
+            <form>
+                <input type="text" maxlength="3" pattern="\b[0-9]\{3\}\b">
+                <input type="submit" value="Play Annexation Roulette" id="button">
+            </form>
         </div>
     </body>
 </html>
