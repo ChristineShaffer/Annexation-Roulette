@@ -31,7 +31,7 @@ h1 {
     left: 562px; 
     width: 75px; 
     height: 72px; 
-    background-color: transparent;  
+    background-color: transparent; 
 }
 #map-part2 { 
     position: absolute; 
@@ -51,26 +51,42 @@ h1 {
 } 
 #map-part4 { 
     position: absolute; 
-    top: 200px; 
+    top: 158px; 
     left: 192px; 
     width: 129px; 
-    height: 200px; 
-    background-color: transparent; 
-    border: 2px solid red;
+    height: 220px; 
+    background-color: transparent;
 } 
 #map-part5 { 
     position: absolute; 
-    top: 230px; 
-    left: 192px; 
-    width: 129px; 
-    height: 148px; 
+    top: 158px; 
+    left: 115px; 
+    width: 206px; 
+    height: 220px; 
+    background-color: transparent;
+} 
+#map-part6 { 
+    position: absolute; 
+    top: 80px; 
+    left: 178px; 
+    width: 460px; 
+    height: 35px; 
     background-color: transparent; 
 } 
+#map-part7 {
+    position: absolute; 
+    top: 80px; 
+    left: 178px; 
+    width: 165px; 
+    height: 72px; 
+    background-color: transparent; 
+}
 
 #map-part1:hover, #map-part1.hovered, #map-part2:hover, #map-part2.hovered, 
 #map-part3:hover, #map-part3.hovered, #map-part4:hover, #map-part4.hovered,
-#map-part5:hover, #map-part5.hovered { 
-    background-color: black; 
+#map-part5:hover, #map-part5.hovered, #map-part6:hover, #map-part6.hovered,
+#map-part7:hover, #map-part7.hovered { 
+    background-color: yellow; 
     opacity: 0.5;
     filter: alpha(opacity=20);      
 }
