@@ -3,6 +3,16 @@ $("document").ready( function() {
     $("#button").click( function(e) {
         e.preventDefault();
         
+        var mapPartArray = ["#map-part1", "#map-part2", "#map-part3", 
+                            "#map-part4", "#map-part5", "#map-part6", 
+                            "#map-part7"];
+        
+        // Remove previous selections if any
+        for(var i = 0; i < mapPartArray.length; i++) {
+            $(mapPartArray[i]).removeClass("hovered");
+        }
+        
+        
        /*
         * Validate input
         */
@@ -31,10 +41,7 @@ $("document").ready( function() {
         }
         
         if(formvalid) {
-            var mapPartArray = ["#map-part1", "#map-part2", "#map-part3", 
-                                "#map-part4", "#map-part5", "#map-part6", 
-                                "#map-part7"];
-
+            
             // Determine stopping area
             var offset;
             number = number.value;
@@ -62,7 +69,7 @@ $("document").ready( function() {
             }
             
             // Get random number
-            var rand = Math.random() + 300;
+            var rand = Math.random() + 250;
 
             // Highlight each area for X number of seconds, incrementally getting 
             // longer and longer until it stops on an area
@@ -75,7 +82,7 @@ $("document").ready( function() {
                 if(i < n) {
                     // Run through id's end/n times
                     if(cur < end) {
-                        console.log(rand, i);
+                        //console.log(rand, i);
                         var curPart = mapPartArray[i];
                         $(curPart).toggleClass("hovered");
                         rand += 50;
@@ -96,7 +103,7 @@ $("document").ready( function() {
                                     setTimeout(flash, 250);
                                 }
                             }
-                            setTimeout(flash, 0);
+                            setTimeout(flash, 500);
                         }
                         setTimeout(highlight, rand);
                     }
