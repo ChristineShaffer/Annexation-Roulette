@@ -3,9 +3,15 @@ $("document").ready( function() {
     $("#button").click( function(e) {
         e.preventDefault();
         
+        // Disable button until done
+        $('#button').attr('disabled', 'disabled');
+        
+        $("#annexation-image").show();
+        $("#dummy").hide();
+        
         var mapPartArray = ["#map-part1", "#map-part2", "#map-part3", 
                             "#map-part4", "#map-part5", "#map-part6", 
-                            "#map-part7"];
+                            "#map-part7", "#map-part8"];
         
         // Remove previous selections if any
         for(var i = 0; i < mapPartArray.length; i++) {
@@ -44,28 +50,33 @@ $("document").ready( function() {
             
             // Determine stopping area
             var offset;
+            var burn = false;
             number = number.value;
             var lastDigit = number.slice(2, 3);
             if(number === "666") {
                 offset = 3;
+            } else if(lastDigit === "0") {
+                offset = 1;
+                burn = true;
             } else if(lastDigit === "1") {
                 offset = 1;
             } else if(lastDigit === "2") {
-                offset = 2;
+                offset = 8;
             } else if(lastDigit === "3") {
-                offset = 4;
-            } else if(lastDigit === "4") {
-                offset = 5;
-            } else if(lastDigit === "5") {
                 offset = 6;
+            } else if(lastDigit === "4") {
+                offset = 1;
+            } else if(lastDigit === "5") {
+                offset = 8;
             } else if(lastDigit === "6") {
                 offset = 1;
+                burn = true;
             } else if(lastDigit === "7") {
-                offset = 2;
+                offset = 1;
             } else if(lastDigit === "8") {
-                offset = 4;
+                offset = 8;
             } else if(lastDigit === "9") {
-                offset = 5;
+                offset = 6;
             }
             
             // Get random number
@@ -76,7 +87,7 @@ $("document").ready( function() {
             var i = 0;
             var n = mapPartArray.length;
             var cur = 0;
-            var end = (n * 3) + offset;
+            var end = (n * 2) + offset;
             function highlight() {
                 // Stick within available id's
                 if(i < n) {
@@ -95,15 +106,23 @@ $("document").ready( function() {
                             }, 500);
                         // Once stopped on area flash it then leave highlighted
                         } else {
-                            var j = 0;
-                            function flash() {
-                                if(j < 6) {
-                                    $(curPart).toggleClass("highlighted");
-                                    j++;
-                                    setTimeout(flash, 250);
+                            if(burn) {
+                                $(curPart).toggleClass("hovered");
+                                $("#annexation-image").hide();
+                                $("#dummy").show();
+                            } else {
+                                var j = 0;
+                                function flash() {
+                                    if(j < 6) {
+                                        $(curPart).toggleClass("highlighted");
+                                        j++;
+                                        setTimeout(flash, 250);
+                                    }
                                 }
+                                setTimeout(flash, 500);
                             }
-                            setTimeout(flash, 500);
+                            // Done; enable button again
+                            $('#button').removeAttr('disabled');
                         }
                         setTimeout(highlight, rand);
                     }
@@ -113,6 +132,9 @@ $("document").ready( function() {
                 }
             }
             setTimeout(highlight, 0);
+        // Form not valid, enable button again
+        } else {
+            $('#button').removeAttr('disabled');
         }
         
     });
