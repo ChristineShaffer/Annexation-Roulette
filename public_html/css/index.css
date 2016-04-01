@@ -86,9 +86,15 @@ h1 {
 #map-part3:hover, #map-part3.hovered, #map-part4:hover, #map-part4.hovered,
 #map-part5:hover, #map-part5.hovered, #map-part6:hover, #map-part6.hovered,
 #map-part7:hover, #map-part7.hovered { 
-    background-color: yellow; 
+    background-color: red; 
     opacity: 0.5;
     filter: alpha(opacity=20);      
+}
+
+#map-part1.highlighted, #map-part2.highlighted, #map-part3.highlighted, 
+#map-part4.highlighted, #map-part5.highlighted, #map-part6.highlighted, 
+#map-part7.highlighted {
+    background-color: blue;
 }
 
 .prompt {
